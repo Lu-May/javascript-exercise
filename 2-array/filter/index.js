@@ -8,6 +8,10 @@ function chooseMultiplesOfThree(collection) {
 
 function chooseNoRepeatNumber(collection) {
   // TODO 2: 在这里写实现代码
+  const result = collection.filter(function remove(number, index, self) {
+    return self.indexOf(number) === index;
+  });
+  return result;
 }
 
 export { chooseMultiplesOfThree, chooseNoRepeatNumber };
